@@ -21,7 +21,18 @@ pip install requests
 ```
 
 ### Jalankan Project Dengan 2 Terminal Berbeda:
-Buka terminal yang pertama, lalu jalankan command'python blockchains.py 5000'. Command tersebut berfungsi untuk menjalankan project pada port 5000. Kemudian buka terminal yang kedua dan jalankan command 'python blockchains 5001'. Command tersebut berfungsi untuk menjalankan project pada port 5001.
+Buka terminal yang pertama, lalu jalankan command berikut
+```
+python blockchains.py 5000
+```
+
+Kemudian buka terminal yang kedua dan jalankan command berikut
+```
+python blockchains 5001
+```
 
 ### Postman Testing:
-Buka postman, lalu export file Blockchain.postman_collection.json
+Buka postman, lalu export file berikut
+```
+Blockchain.postman_collection.json
+```
