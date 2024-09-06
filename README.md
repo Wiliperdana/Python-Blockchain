@@ -71,3 +71,23 @@ python blockchains.py 5001
 
    - Jalankan kembali request **Get Blockchain 2**.
      - Sekarang respons sudah sama dengan **Get Blockchain 1**.
+
+
+### Notes
+```
+python blockchains.py 5000:
+
+Get Blockchain 1
+Mining 1
+Transaction 1
+Add Nodes 1
+Sync Node 1
+
+python blockchains.py 5001:
+
+Get Blockchain 2
+Mining 2
+Transaction 2
+Add Nodes 2
+Sync Node 2
+```
