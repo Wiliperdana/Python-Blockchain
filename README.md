@@ -6,7 +6,7 @@ Pengembangan Blockchain Menggunakan Python Pada Jaringan Lokal
 # Installation
 ### Clone the repository:
 ```
-git clone https://github.com/Wiliperdana/Python-Blockchains.git
+git clone https://github.com/Wiliperdana/Python-Blockchain.git
 ```
 
 ### Pindah ke directory Python-Blockchains:
