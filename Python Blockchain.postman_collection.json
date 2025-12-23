@@ -1,0 +1,602 @@
+{
+	"info": {
+		"_postman_id": "c76d983b-4f82-4a75-b4e9-100d11850b6b",
+		"name": "Python Blockchain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40864701"
+	},
+	"item": [
+		{
+			"name": "Initialization",
+			"item": [
+				{
+					"name": "[Node 1] Register Node",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nodes\": [\r\n        \"localhost:5001\",\r\n        \"localhost:5002\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_1}}/nodes/register",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"nodes",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 2] Register Node",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nodes\": [\r\n        \"localhost:5000\",\r\n        \"localhost:5002\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_2}}/nodes/register",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_2}}",
+							"path": [
+								"nodes",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 3] Register Node",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nodes\": [\r\n        \"localhost:5000\",\r\n        \"localhost:5001\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_3}}/nodes/register",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_3}}",
+							"path": [
+								"nodes",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "[Node 1] Create Wallet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_1}}/wallet/create",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"wallet",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 2] Create Wallet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_2}}/wallet/create",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_2}}",
+							"path": [
+								"wallet",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 3] Create Wallet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_3}}/wallet/create",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_3}}",
+							"path": [
+								"wallet",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 1] Get Balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_1}}/wallet/balance?public_key=cc84b1fa8ff1367e4dae23bf89d360e791ed444d7a0d2cae7888b34b704956f40df5158b6abbdcec53599cab6ba812630b9712c533ce83af85e315f64c790884",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"wallet",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "public_key",
+									"value": "cc84b1fa8ff1367e4dae23bf89d360e791ed444d7a0d2cae7888b34b704956f40df5158b6abbdcec53599cab6ba812630b9712c533ce83af85e315f64c790884"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 2] Get Balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_2}}/wallet/balance?public_key=5500fb9902f65ec50143183528a11b7fa7c2f4a57d3ed387a5e861ac7fd892d5f65a6b8a8db33e7cedbe0989e16432435af4e6a292b274ec94658efac6f9002d",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_2}}",
+							"path": [
+								"wallet",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "public_key",
+									"value": "5500fb9902f65ec50143183528a11b7fa7c2f4a57d3ed387a5e861ac7fd892d5f65a6b8a8db33e7cedbe0989e16432435af4e6a292b274ec94658efac6f9002d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 3] Get Balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_3}}/wallet/balance?public_key=04a4577a5c38ec0c2f7edf7be7065dc8112a6bb11d3250a311b110eccf7cfa6964b370f90ceea2aa51742120bdd0018937ceebffd98d2b95a5b804c700d8ce9d",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_3}}",
+							"path": [
+								"wallet",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "public_key",
+									"value": "04a4577a5c38ec0c2f7edf7be7065dc8112a6bb11d3250a311b110eccf7cfa6964b370f90ceea2aa51742120bdd0018937ceebffd98d2b95a5b804c700d8ce9d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "[Node 1] Sign Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"private_key\": \"630849519a60e25db4120ea5862a12cd05215653f16c99caa64a118dad7a4e8e\",\r\n    \"recipient\": \"6c9cd114280532701f6c3ff7331260111df469b85c2b8ff9ec4d30b142adf163d7495cd469302775ecfeee479d5e1bd9b7020614e72d3918f46639eb2d4c3602\",\r\n    \"amount\": 7.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_1}}/transaction/sign",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"transaction",
+								"sign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 2] Sign Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"private_key\": \"\",\r\n    \"recipient\": \"\",\r\n    \"amount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_2}}/transaction/sign",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_2}}",
+							"path": [
+								"transaction",
+								"sign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 3] Sign Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"private_key\": \"05633a342ea983008661b5b2d738baef1724d7129c760291dcc43298e02ead18\",\r\n    \"recipient\": \"\",\r\n    \"amount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_3}}/transaction/sign",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_3}}",
+							"path": [
+								"transaction",
+								"sign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 1] Add Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 7.5,\r\n    \"chain_id\": \"excoin\",\r\n    \"nonce\": 312869,\r\n    \"recipient\": \"6c9cd114280532701f6c3ff7331260111df469b85c2b8ff9ec4d30b142adf163d7495cd469302775ecfeee479d5e1bd9b7020614e72d3918f46639eb2d4c3602\",\r\n    \"sender\": \"9f0f94de47e1068e0109ad9696c9cbe7bdda47e4cc18cb0e426a18b1c8d714f70639772fa4104dd7d5f1af69e447224b9c70c5483a71de4f9ac51e37579b3860\",\r\n    \"timestamp\": 1765459909,\r\n    \"transaction_id\": \"c1c44bc701f041e3f0200e9cec7b1a8705d5119a6f0b13b5a3fa7f1cdb7f614f\",\r\n    \"signature\": \"b29770e16deb664de04a42479e304de5e815509567f7c660f433578e397eab143e7dcea1f3d2aa4a8ccb850ee7a287d34c211e6571eafc8829e0160c6f681fe3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_1}}/transactions/add",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"transactions",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 2] Add Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 25,\r\n    \"chain_id\": \"excoin\",\r\n    \"nonce\": 756108,\r\n    \"recipient\": \"bf6ed43ea9a9bd04aaf8ae83ec5862221d48b5250515e4a74028b3ac47aff8604b9afa4db19f9cb7c3082d69f5c84cd6a123daf104b05f8eecebf32c96c3affa\",\r\n    \"sender\": \"35c6e2ccfa82d353d5a7f155c82147f393f5b9ac476288f44718709f2b7c81a4f90712dcb67a52e16aa3ff8f758ca38f2ee41f4b26aa1b677ee88917f29ba09b\",\r\n    \"timestamp\": 1765421756,\r\n    \"transaction_id\": \"c75a41d001ec17e28b5aa1a9b6b1507903d33ad4c0c2a8d54afe197e510cc40e\",\r\n    \"signature\": \"f22551fd98010068326cba9fcb8b7fc0dea088a9cdd7c9d1eb118058b827daa53531ff8742fabf36c36275ed77e62c00951688f0effcc81cfe7f77eae6f649c4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_2}}/transactions/add",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_2}}",
+							"path": [
+								"transactions",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 3] Add Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 12,\r\n    \"chain_id\": \"excoin\",\r\n    \"nonce\": 791124,\r\n    \"recipient\": \"b10da7eb18d574a6b452b5fec75e5cf809dfe7daf3ed90dc232e5743307c1093d0d953183c888f2ba9aa0d3f85cd476d3025d1cb08f273868ab81f5bc095f2dc\",\r\n    \"sender\": \"338e6f5d220d6fb6f698fc3a1ba27e6f5fd0a7bd2be9bc756902aa1efa9178c06473d922aeb7ded5930c47218a0ac9b25ca95dd4e5540cb73087ff2d688b4e60\",\r\n    \"timestamp\": 1764920517,\r\n    \"transaction_id\": \"d06cd1ca976f23d38158c568545789decdb1f77485f13d506e78a2b2a5e1e05b\",\r\n    \"signature\": \"3b7a93071f86523a3465031b5562327b4fba8678292772b2925fffbf126ed9673c5b71c36135e35ba660ef4af0af652ebcb0ce7d9fecc825faf42f7b7ddd5332\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{node_3}}/transactions/add",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_3}}",
+							"path": [
+								"transactions",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 1] Mempool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_1}}/transactions/pending",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"transactions",
+								"pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 2] Mempool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_2}}/transactions/pending",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_2}}",
+							"path": [
+								"transactions",
+								"pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 3] Mempool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_1}}/transactions/pending",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"transactions",
+								"pending"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mining",
+			"item": [
+				{
+					"name": "[Node 1] Mining Block",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_1}}/mine?address=9f0f94de47e1068e0109ad9696c9cbe7bdda47e4cc18cb0e426a18b1c8d714f70639772fa4104dd7d5f1af69e447224b9c70c5483a71de4f9ac51e37579b3860",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"mine"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "9f0f94de47e1068e0109ad9696c9cbe7bdda47e4cc18cb0e426a18b1c8d714f70639772fa4104dd7d5f1af69e447224b9c70c5483a71de4f9ac51e37579b3860"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 2] Mining Block",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_2}}/mine?address=b10da7eb18d574a6b452b5fec75e5cf809dfe7daf3ed90dc232e5743307c1093d0d953183c888f2ba9aa0d3f85cd476d3025d1cb08f273868ab81f5bc095f2dc",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_2}}",
+							"path": [
+								"mine"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "b10da7eb18d574a6b452b5fec75e5cf809dfe7daf3ed90dc232e5743307c1093d0d953183c888f2ba9aa0d3f85cd476d3025d1cb08f273868ab81f5bc095f2dc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 3] Mining Block",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_3}}/mine?address=6c9cd114280532701f6c3ff7331260111df469b85c2b8ff9ec4d30b142adf163d7495cd469302775ecfeee479d5e1bd9b7020614e72d3918f46639eb2d4c3602",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_3}}",
+							"path": [
+								"mine"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "6c9cd114280532701f6c3ff7331260111df469b85c2b8ff9ec4d30b142adf163d7495cd469302775ecfeee479d5e1bd9b7020614e72d3918f46639eb2d4c3602"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blockchain",
+			"item": [
+				{
+					"name": "[Node 1] Blockchain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_1}}/chain",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_1}}",
+							"path": [
+								"chain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 2] Blockchain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_2}}/chain",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_2}}",
+							"path": [
+								"chain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Node 3] Blockchain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{node_3}}/chain",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{node_3}}",
+							"path": [
+								"chain"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
